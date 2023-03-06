@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "704d2223-8d21-49e3-9f03-0bbe75658bbf",
+		"name": "Calendario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST agregar usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Octavio Corzo\",\r\n    \"email\": \"corzito@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET renew",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZkMmE4NjJjOWNlZmU5ZTQxZDNkNTEiLCJuYW1lIjoiT2N0YXZpbyBDb3J6byIsImlhdCI6MTY3NzUzNTg4OSwiZXhwIjoxNjc3NTQzMDg5fQ.db1sQQR3XxQw9VrPkl1MOwn7w1O3T9xGWpohUuSi-XQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/auth/renew",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"renew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"corzito@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST agregar evento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZkMzIzNWQ2OWRjZjgwM2Q1MGFjZmUiLCJuYW1lIjoiT2N0YXZpbyBDb3J6byIsImlhdCI6MTY3NzUzNzg2NSwiZXhwIjoxNjc3NTQ1MDY1fQ.2MwSAdYeK2qExlTeddSmEYOuaE2sg9qVDOXjk84Me8A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Sacar al chucho\",\r\n    \"start\": \"2022-02-23\",\r\n    \"end\": \"2022-03-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/events/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET eventos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZjZGM4NTQyNTA2YmM5Yjg1Mjg0Y2QiLCJuYW1lIjoiT2N0YXZpbyBDb3J6byIsImlhdCI6MTY3NzUxNjQxOSwiZXhwIjoxNjc3NTIzNjE5fQ.oU0hlgwaDNxQvVogzewXYf1JnSVPtA8qbUpJDadtyyM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/events/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT editar evento",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZkMzIzNWQ2OWRjZjgwM2Q1MGFjZmUiLCJuYW1lIjoiT2N0YXZpbyBDb3J6byIsImlhdCI6MTY3NzUzNzg2NSwiZXhwIjoxNjc3NTQ1MDY1fQ.2MwSAdYeK2qExlTeddSmEYOuaE2sg9qVDOXjk84Me8A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"sacar al perrito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/events/63fd3255d69dcf803d50ad01",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						"63fd3255d69dcf803d50ad01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE eventos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZkMzIzNWQ2OWRjZjgwM2Q1MGFjZmUiLCJuYW1lIjoiT2N0YXZpbyBDb3J6byIsImlhdCI6MTY3NzUzNzg2NSwiZXhwIjoxNjc3NTQ1MDY1fQ.2MwSAdYeK2qExlTeddSmEYOuaE2sg9qVDOXjk84Me8A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/events/63fd3255d69dcf803d50ad01",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						"63fd3255d69dcf803d50ad01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
